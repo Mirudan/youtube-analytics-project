@@ -12,7 +12,7 @@ class Video:
         """возвращает объект для работы с YouTube API"""
         return build('youtube', 'v3', developerKey=cls.api_key)
 
-    def __int__(self, video_id: str):
+    def __init__(self, video_id: str):
         """Экземпляр инициализируется по id видео. Дальше все данные будут подтягиваться по API."""
         self.__video_id = video_id
 
@@ -27,3 +27,11 @@ class Video:
         """представление класса для пользователя"""
         return self.video_title
 
+
+class PLVideo(Video):
+    """Класс плейлист YOUTUBE"""
+
+    def __init__(self, video_id: str, playlist_id: str):
+        """инициализация из родительского класса и дополнительного атрибута playlist_id"""
+        super().__init__(video_id)
+        self.playlist_id = playlist_id
