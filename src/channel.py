@@ -1,9 +1,8 @@
 import json
-from googleapiclient.discovery import build
-from src.baseclass import Apibase
+from src.baseclass import MixinBase
 
 
-class Channel(Apibase):
+class Channel(MixinBase):
     """Класс для ютуб-канала"""
 
     def __init__(self, channel_id: str) -> None:
