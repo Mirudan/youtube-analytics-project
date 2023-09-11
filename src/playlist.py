@@ -1,9 +1,9 @@
-from src.baseclass import Apibase
+from src.baseclass import MixinBase
 import datetime
 import isodate
 
 
-class PlayList(Apibase):
+class PlayList(MixinBase):
 
     def __init__(self, playlist_id: str):
         """инициализация экземпляра класса"""

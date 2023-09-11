@@ -1,8 +1,7 @@
-from src.baseclass import Apibase
-from googleapiclient.discovery import build
+from src.baseclass import MixinBase
 
 
-class Video(Apibase):
+class Video(MixinBase):
     """Класс для видео с Youtube"""
 
     def __init__(self, video_id: str):
